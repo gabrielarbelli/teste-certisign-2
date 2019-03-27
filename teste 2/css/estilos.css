@@ -1,0 +1,384 @@
+body {
+	margin:0px; 
+	padding:0px;
+	font-family: Arial, Helvetica, Tahoma, sans-serif;
+	font-size:10px;
+	color: #ffffff;
+	background-color: #f1f1f1;
+} 
+
+a, button, a:hover{
+	cursor:pointer;
+	text-decoration: none;
+}
+
+img{
+	border:0;
+}
+
+/*Estrutura do site..........................................................................*/
+
+header{
+	float: left;
+	position:relative;
+	width: 100%;
+	height: 70px;
+	background: url("../images/logo.png") center top no-repeat;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 5px 5px 5px rgb(0,0,0,0.2);
+    z-index: 1002;
+    transition: all 0.3s cubic-bezier(0.0, 0.0, 0.3, 1.0);
+}
+
+footer{
+	position:relative; 
+	float:left;
+	text-align: center;
+	width:100%;
+	height:94px;
+	padding-top: 30px;
+	background:#2d498c;
+    transition: all 0.3s cubic-bezier(0.0, 0.0, 0.3, 1.0);
+}
+
+
+/* Formatação do cabecalho ---------------------------------------------------------- */
+
+.container{
+	position: relative;
+	display: inline-block;
+	width: 1200px;
+	padding-top: 20px;
+	border-top: 3px solid #dedede;
+}
+
+.linha0{
+	position:relative;
+	float:left;
+	width:100%;
+	height:0px;
+	z-index:99;
+	overflow: visible;
+}
+
+.linha{
+	position:relative;
+	float:left;
+	width:100%;
+}
+
+/*************** HOME *********************/
+
+.produtos{
+	text-align: center;
+	margin-top: 20px;
+}
+
+.produto{
+	position: relative;
+	float: left;
+    text-align: center;
+	width: 18%;
+	margin-right: 2.5%;
+	height: 370px;
+	padding-top: 50px;
+	margin-bottom: 50px;
+	background-color: #fff;
+    -webkit-transition: all 0.3s cubic-bezier(0.0, 0.0, 0.3, 1.0);  
+    -moz-transition: all 0.3s cubic-bezier(0.0, 0.0, 0.3, 1.0); 
+    -o-transition: all 0.3s cubic-bezier(0.0, 0.0, 0.3, 1.0);
+    -ms-transition: all 0.3s cubic-bezier(0.0, 0.0, 0.3, 1.0); 
+    transition: all 0.3s cubic-bezier(0.0, 0.0, 0.3, 1.0);
+	border: 1px solid #dedede;
+}
+
+.produto:nth-child(5n+5){
+	margin-right: 0%;
+}
+
+.produto:last-child{
+	margin-right: 0% !important;
+}
+
+.produto h1{
+    font-family: 'open_sansbold';
+    text-align: center;
+    width: 90%;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 5%;
+    font-size: 1.9em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+	border-top: 2px solid #dedede;
+	color: #00396c;
+}
+
+.produto h2{
+    font-family: 'open_sanssemibold';
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+	color: #00396c;
+}
+
+.produto img{
+	cursor: pointer;
+}
+
+.botaoComprar{
+	position: relative;
+	display: inline-block;
+    width: 90%;
+    height: 45px;
+    padding-top: 11px;
+    border: 5px solid #dedede;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'open_sansbold';
+    color: #fff;
+    background-color: #ff6015;
+    transition: all 0.3s cubic-bezier(0.0, 0.0, 0.3, 1.0);
+}
+
+.botaoComprar:hover, .botaoComprar:focus{
+	color: #000000 !important;
+}
+
+/*Popup ..................... */
+
+.black_overlay{
+	position:fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+	z-index:99999;
+	-moz-opacity: 0.5;
+	opacity:.80;
+	filter: alpha(opacity=50);
+	display:none;
+}
+
+.white_content {
+	position:fixed;
+	width: 430px;
+	height: 500px;
+	background-color:#ffffff;
+	z-index:9999999;
+	overflow:visible;
+	display:none;
+	text-align: center;
+}
+
+.white_content .btFechar {
+	position:relative;
+	float: right;
+	width: 100%;
+	text-align:right;
+}
+
+.white_content h3{
+    font-family: 'open_sansbold';
+    text-align: center;
+    width: 100%;
+    font-size: 2.8em;
+    padding-top: 50px;
+    padding-bottom: 32px;
+    margin: 0;
+	color: #00396c;
+}
+
+.white_content h4{
+    font-family: 'open_sansregular';
+    text-align: left;
+    width: 80%;
+    margin: 0;
+    margin-left: 10%;
+    font-size: 18px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+	color: #434343;
+}
+
+.white_content span{
+    font-family: 'open_sansbold';
+}
+
+.white_content img{
+	width: 176px;
+	height: 111px;
+	margin-bottom: 20px;
+}
+
+.botaoComprar2{
+	position: relative;
+	display: inline-block;
+    width: 60%;
+    height: 65px;
+    padding-top: 17px;
+    border: 5px solid #dedede;
+    border-radius: 25px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-size: 21px;
+    text-align: center;
+    font-family: 'open_sansbold';
+    color: #fff;
+    background-color: #ff6015;
+    transition: all 0.3s cubic-bezier(0.0, 0.0, 0.3, 1.0);
+}
+
+.botaoComprar2:hover, .botaoComprar2:focus{
+	color: #000000 !important;
+}
+
+.white_content .fechar{
+	position:relative;
+	float:right;
+	cursor: pointer;
+	right: -15px;
+	top: -10px;
+	width: 30px;
+	height: 30px;
+}
+
+/*************** @MEDIA *********************/
+
+@media (min-width: 768px) and (max-width: 1230px) {
+	body{
+		font-size:8px;	
+	}
+	.container{
+		width: 750px;
+	}
+	.produto{
+		width: 23%;
+		margin-right: 2.6%;
+	}
+	.produto:nth-child(4n+4){
+		margin-right: 0%;
+	}
+	.produto:nth-child(5n+5){
+		margin-right: 2.6%;
+	}
+	.produto img:first-child{
+		width: 80%;
+		height: auto;
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+	.container{
+		width: 100%;
+	}
+	.produto{
+		width: 45%;
+		margin-left: 3.25%;
+		margin-right: 0% !important;
+	}
+	.produto img:first-child{
+		width: 80%;
+		height: auto;
+	}
+	.white_content{
+		height: 85vh;
+		width: 90%;
+		padding-bottom: 10px;
+		text-align: center;
+		overflow: scroll;
+	}
+	.white_content h3{
+		font-size: 2.2em;
+	}
+
+}
+
+
+/* @FACE ---------------------------------------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../js/fontes/opensans-bold-webfont.woff2') format('woff2'),
+         url('../js/fontes/opensans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold_italic';
+    src: url('../js/fontes/opensans-bolditalic-webfont.woff2') format('woff2'),
+         url('../js/fontes/opensans-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansextrabold';
+    src: url('../js/fontes/opensans-extrabold-webfont.woff2') format('woff2'),
+         url('../js/fontes/opensans-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansextrabold_italic';
+    src: url('../js/fontes/opensans-extrabolditalic-webfont.woff2') format('woff2'),
+         url('../js/fontes/opensans-extrabolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansitalic';
+    src: url('../js/fontes/opensans-italic-webfont.woff2') format('woff2'),
+         url('../js/fontes/opensans-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../js/fontes/opensans-light-webfont.woff2') format('woff2'),
+         url('../js/fontes/opensans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanslight_italic';
+    src: url('../js/fontes/opensans-lightitalic-webfont.woff2') format('woff2'),
+         url('../js/fontes/opensans-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../js/fontes/opensans-regular-webfont.woff2') format('woff2'),
+         url('../js/fontes/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('../js/fontes/opensans-semibold-webfont.woff2') format('woff2'),
+         url('../js/fontes/opensans-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanssemibold_italic';
+    src: url('../js/fontes/opensans-semibolditalic-webfont.woff2') format('woff2'),
+         url('../js/fontes/opensans-semibolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
